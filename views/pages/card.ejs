@@ -1,0 +1,21 @@
+<%- include('../partials/head') -%> 
+    
+<%- include('../partials/nav') -%> 
+<main class="info-card">
+        <div class="document">
+            <img class="img" src="<%= inventoryItem.image %>" alt="photo of document">
+        </div>
+        <div class="doc-info">
+            <p><span>Title:</span> <%= inventoryItem.title %></p>
+            <p><span>Subject:</span> <%= inventoryItem.subject %></p>
+            <p><span>Date:</span> <%= inventoryItem.date %></p>
+            <p><span>Location:</span> <%= inventoryItem.location %></p>
+            <p><span>Page(s):</span> <%= inventoryItem.pages %></p>
+            <p><span>Source:</span> <%= inventoryItem.source %></p>
+            <p><span>Type:</span> <%= inventoryItem.type %></p>
+        </div>
+        <div class="description">
+            <p><span>Description:</span> <%= inventoryItem.synopsis %></p>
+        </div>    
+</main>
+<%- include('../partials/footer') -%> 

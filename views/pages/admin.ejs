@@ -1,0 +1,29 @@
+<%- include('../partials/head') -%> 
+    
+<%- include('../partials/nav') -%> 
+
+
+<section class="main-content" id="main-content">
+
+    <h1 class="heading"> <span>admin - docs</span> </h1>
+  
+        <div class="main-content-layout">
+  
+          <% for (docs of inventoryArray)  { %>
+            <div class="box">
+                <div class="content">
+                    <h3><%= docs.title %></h3>
+                    <p class="source"><%= docs.source %></p>
+                    <a href="/admin/<%= docs._id %>/edit-docs" class="btn">edit</a> 
+                    <form action="/docs/<%= docs._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
+                      <button class="btn" type="submit">delete</button>
+                    </form>   
+                </div>
+            </div>
+            <% } %> 
+  
+          </div>
+  
+  </section>
+
+  <%- include('../partials/footer') -%> 

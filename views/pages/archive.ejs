@@ -1,0 +1,128 @@
+<%- include('../partials/head') -%> 
+    
+<%- include('../partials/nav') -%> 
+<main>
+    <!--sticky search bar  -->
+    <!-- <div class="topnav">
+        <input type="text" placeholder="Keyword search...">
+      </div> -->
+    <!-- thumbnails and basic info in flex box -->
+    <div class="archive">
+        <% for (docs of inventoryArray)  { %>
+            <a href="/docs/<%= docs._id %>">
+                <div>
+                    <img class="thumbnail" src="<%= docs.imageUrl %>" alt="document thumbnail">
+                </div>
+                    <div class="info-thumbnail">
+                        <p><span>Title:</span> <%= docs.title %></p>
+                        <p><span>Subject:</span> <%= docs.subject %></p>
+                        <p><span>Date:</span> <%= docs.date %></p>
+                        <p><span>Location:</span> <%= docs.location %></p>
+                        <p><span>Page(s):</span> <%= docs.pages %></p>
+                        <p><span>Source:</span> <%= docs.source %></p>
+                        <p><span>Type:</span> <%= docs.type %></p>
+                    </div>
+            </a>
+        <% } %>
+    </div>
+    <!-- <div>
+        <div>
+        <img class="thumbnail" src="./images/ca-PT-TT-PIDE-DGS-CI-11542-NT7627_c0001.JPG" alt="document thumbnail">
+        </div>
+        <div class="info-thumbnail">
+            <p><span>Title:</span> Secção Prisional da PIDE</p>
+            <p><span>Subject:</span> Machava Prison Camp</p>
+            <p><span>Date:</span> 1963</p>
+            <p><span>Location:</span> Maputo, Mozambique</p>
+            <p><span>Page(s):</span> 1</p>
+            <p><span>Source:</span> Arquivo Nacional Torre do Tombo </p>
+            <p><span>Type:</span> Photo</p>
+        </div>
+    </div>
+    <div>
+        <div>
+        <a href="card.html"><img class="thumbnail" src="./images/IMG_20181212_111421.jpg" alt="document thumbnail"></a>
+        </div>
+        <div class="info-thumbnail">
+            <p><span>Title:</span> Ilha das Galinhas Prison Camp Administrative Building</p>
+            <p><span>Subject:</span> Galinhas Prison Camp</p>
+            <p><span>Date:</span> 12 December 2018</p>
+            <p><span>Location:</span> Ilha das Galinhas, Guinea-Bissau</p>
+            <p><span>Page(s):</span> 1</p>
+            <p><span>Source:</span> Personal Archive Anna Mester</p>
+            <p><span>Type:</span> Photo</p>
+        </div>
+    </div>
+    <div>
+        <div>
+        <img class="thumbnail" src="./images/Mossamedes Angola Presos.jpg" alt="document thumbnail">
+        </div>
+        <div class="info-thumbnail">
+            <p><span>Title:</span></p>
+            <p><span>Subject:</span></p>
+            <p><span>Date:</span></p>
+            <p><span>Location:</span></p>
+            <p><span>Page(s):</span></p>
+            <p><span>Source:</span></p>
+            <p><span>Type:</span></p>
+        </div>
+    </div>
+    <div>
+        <div>
+        <img class="thumbnail" src="./images/PT-TT-SNI-ARQF-DO-020-002-35348_m002.jpg" alt="document thumbnail">
+        </div>
+        <div class="info-thumbnail">
+            <p><span>Title:</span></p>
+            <p><span>Subject:</span></p>
+            <p><span>Date:</span></p>
+            <p><span>Location:</span></p>
+            <p><span>Page(s):</span></p>
+            <p><span>Source:</span></p>
+            <p><span>Type:</span></p>
+        </div>
+    </div>
+    <div>
+        <div>
+        <img class="thumbnail" src="./images/PT-TT-SNI-ARQF-DO-020-002-35354_m001.jpg" alt="document thumbnail">
+        </div>
+        <div class="info-thumbnail">
+            <p><span>Title:</span></p>
+            <p><span>Subject:</span></p>
+            <p><span>Date:</span></p>
+            <p><span>Location:</span></p>
+            <p><span>Page(s):</span></p>
+            <p><span>Source:</span></p>
+            <p><span>Type:</span></p>
+        </div>
+    </div>
+    <div>
+        <div>
+        <img class="thumbnail" src="./images/PT-TT-SNI-ARQF-RP-003-53694_m002.jpg" alt="document thumbnail">
+        </div>
+        <div class="info-thumbnail">
+            <p><span>Title:</span></p>
+            <p><span>Subject:</span></p>
+            <p><span>Date:</span></p>
+            <p><span>Location:</span></p>
+            <p><span>Page(s):</span></p>
+            <p><span>Source:</span></p>
+            <p><span>Type:</span></p>
+        </div>
+    </div>
+    <div>
+        <div>
+        <img class="thumbnail" src="./images/SAM_1936.JPG" alt="document thumbnail">
+        </div>
+        <div class="info-thumbnail">
+            <p><span>Title:</span></p>
+            <p><span>Subject:</span></p>
+            <p><span>Date:</span></p>
+            <p><span>Location:</span></p>
+            <p><span>Page(s):</span></p>
+            <p><span>Source:</span></p>
+            <p><span>Type:</span></p>
+        </div>
+    </div>
+    </div> -->
+</main>
+<%- include('../partials/footer') -%> 
