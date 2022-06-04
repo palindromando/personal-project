@@ -11,7 +11,7 @@
         <% for (docs of inventoryArray)  { %>
             <a href="/docs/<%= docs._id %>">
                 <div>
-                    <img class="thumbnail" src="<%= docs.imageUrl %>" alt="document thumbnail">
+                    <img class="thumbnail" src="/images/<%= docs.imageUrl %>" alt="document thumbnail">
                 </div>
                     <div class="info-thumbnail">
                         <p><span>Title:</span> <%= docs.title %></p>

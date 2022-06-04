@@ -6,18 +6,18 @@
         <h3>Register</h3>
         <div class="form">
         <form action="/register" method="POST">
-            <div>
+            <div class="alignform">
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username" placeholder="username" required/>
             </div>
-            <div>
+            <div class="alignform">
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" placeholder="password" required/>
             </div>
             <input class="contribute-button" type="submit" value="Submit">
-            <p><a href="/auth/google" class="btn">Register with Google</a></p>
-            <p>Already have an account? <a href="/login">Login here!</a></p>
-            <p><a href="/docs/archive"> Enter as guest</a></p>
+            <p class="login"><a href="/auth/google" class="loginlink"><span>Register with Google</span></a></p>
+            <p class="login">Already have an account? <a href="/login"><span>Login here!</span></a></p>
+            <p class="login gap"><a href="/docs/archive"> <span>Enter as guest</span></a></p>
         </form>
 </main>
 <%- include('../partials/footer') -%> 

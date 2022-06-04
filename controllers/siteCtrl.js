@@ -17,6 +17,13 @@ module.exports = {
         signedIn: siteData.signedIn
     });
   },
+  thankyou: (request, response) => {
+    response.render('pages/thankyou', {
+        name: siteData.userName,
+        copyrightYear: siteData.year,
+        signedIn: siteData.signedIn
+    });
+  },
   map: (request, response) => {
     response.render('pages/map', {
         name: siteData.userName,
@@ -31,10 +38,24 @@ module.exports = {
         signedIn: siteData.signedIn
     });
   },
-  submission_post: (request, response) => {
-    const 
-    response.render()
-  }
+  // submission_post: (request, response) => {
+  //   const {title, subject, date, location, pages, source, type, synopsis, imageUrl} = request.body;
+  //   const newDocs = new Docs ({
+  //     title: title,
+  //     subject: subject,
+  //     date: date,
+  //     location: location,
+  //     pages: pages,
+  //     source: source,
+  //     type: type,
+  //     synopsis: synopsis,
+  //     imageUrl: imageUrl,
+  //   });
+    
+  //   newDocs.save();
+
+  //   response.redirect("pages/submission"); 
+  // },
   register_get:(request, response) => {
     response.render('pages/register', {
       copyrightYear: siteData.year

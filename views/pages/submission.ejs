@@ -5,42 +5,42 @@
 <main class="submission">
 <h2>Contribute to the Archive</h2>
 <div class="form">
-<form action="/docs/<%= foundDocs._id %>?_method=PUT" method="POST">
+<form action="/docs/" method="POST">
     <div>
         <label for="name">Name:</label>
-        <input type="text" name="name" id="name" placeholder="Your first and last names"/>
+        <input type="text" name="name" id="name" placeholder="Your first and last names" />
     </div>
     <div>
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Email address" />
+        <input type="email" name="email" id="email" placeholder="Email address"  />
     </div>
     <div>
        <label for="title">Title:</label>
-       <input type="text" name="title" id="title" placeholder="Title of contribution">
+       <input type="text" name="title" id="title" placeholder="Title of contribution" required minlength="1" />
     </div>
     <div>
        <label for="subject">Subject:</label>
-       <input type="text" name="subject" id="subject" placeholder="Subject" />
+       <input type="text" name="subject" id="subject" placeholder="Subject" required minlength="5"/>
     </div>
     <div>
         <label for="date">Date:</label>
-        <input type="text" name="date" id="date" placeholder="Year" />
+        <input type="string" name="date" id="date" placeholder="Year" required minlength="1"/>
      </div>
     <div>
        <label for="location">Location:</label>
-       <input type="text" name="location" id="location" placeholder="City, Country" />
+       <input type="text" name="location" id="location" placeholder="City, Country" required minlength="1"/>
     </div>
     <div>
        <label for="numberofpages">Page(s):</label>
-       <input type="text" name="numberofpages" id="numberofpages" placeholder="Number of pages" />
+       <input type="number" name="pages" id="numberofpages" placeholder="Number of pages"required min="1" />
     </div>
     <div>
        <label for="source">Source:</label>
-       <input type="text" name="source" id="source"  placeholder="Source" />
+       <input type="text" name="source" id="source"  placeholder="Source" required minlength="1" />
     </div>
     <div>
         <label for="type">Type:</label>
-        <select id="type" required />
+        <select id="type" name="type" required />
             <option value="" selected disabled>Select</option>
             <option value="document">Document</option>
             <option value="photo">Photo</option>
@@ -51,8 +51,8 @@
         </select>
      </div> 
     <div>
-       <label class="comments-label" for="comments">Comments:</label>
-       <textarea name="comments" id="comments" placeholder="Please explain the context and significance of your submission." rows="1" cols="25" disabled></textarea>
+       <label class="comments-label" for="synopsis">Comments:</label>
+       <textarea name="synopsis" id="synopsis" rows="1" cols="25" disabled></textarea>
     </div>
     <input class="contribute-button" type="submit" value="Submit">
 </form>

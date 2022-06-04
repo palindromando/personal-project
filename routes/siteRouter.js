@@ -9,13 +9,16 @@ router.route('/')
 router.route('/about')
   .get(siteCtrl.about);
 
+  router.route('/thankyou')
+  .get(siteCtrl.thankyou);
+
 router.route('/map')
   .get(siteCtrl.map)
   .post(siteCtrl.map)
 
 router.route('/submission')
   .get(siteCtrl.submission)
-  .post(siteCtrl.submission_post)
+//   .post(siteCtrl.submission_post)
 
 router.route('/register')
   .get(siteCtrl.register_get)

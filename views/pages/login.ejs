@@ -2,22 +2,23 @@
     
 <%- include('../partials/nav') -%>
 
-<main>
-    <main class="submission">
+<main class="submission">
         <h3>Login</h3>
         <div class="form">
         <form action="/login" method="POST">
-            <div>
+            <div class="alignform">
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username" placeholder="username" required/>
             </div>
-            <div>
+            <div class="alignform">
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" placeholder="password" required/>
             </div>
             <input class="contribute-button" type="submit" value="Submit">
-            <p><a href="/auth/google" class="btn">Login with Google</a></p>
-            <p>Don't Have An Account? <a href="/docs/archive"> Enter as guest or</a> <a href="/register">create one here.</a></p>
+            
+            <!-- <p class="login">Don't Have An Account? <a href="/docs/archive"  class="loginlink"> Enter as guest or</a> <a href="/register"  class="loginlink">create one here.</a></p> -->
+                <p class="login"><a href="/auth/google" class="loginlink"><span>Login with Google</span></a></p>
+                <p class="login gap"><a href="/docs/archive"> Enter as <span>guest</span></a> or <a href="/register"> <span>create an account here</span>.</a></p>
         </form>
 </main>
 

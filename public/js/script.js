@@ -1,9 +1,9 @@
 // 1. select the hamburger icon
-const hamburgericon = document.querySelector(".icon");
+const hamburgericon = document.querySelector(".hammyicon");
 // 2. write the event handler to show or hide  the menu
 const toggleMenu = function() {
-    const navbar = document.querySelector('.list')
-    navbar.classList.toggle('open');
+    const navbar = document.querySelector('.hamburger-dropdown')
+    navbar.classList.toggle('list');
 }
 // 3. use addevenntlistener to attach the hamburger icon to the event handler 
 hamburgericon.addEventListener('click', toggleMenu);

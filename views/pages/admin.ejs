@@ -3,27 +3,43 @@
 <%- include('../partials/nav') -%> 
 
 
-<section class="main-content" id="main-content">
-
-    <h1 class="heading"> <span>admin - docs</span> </h1>
-  
-        <div class="main-content-layout">
-  
-          <% for (docs of inventoryArray)  { %>
-            <div class="box">
-                <div class="content">
-                    <h3><%= docs.title %></h3>
-                    <p class="source"><%= docs.source %></p>
-                    <a href="/admin/<%= docs._id %>/edit-docs" class="btn">edit</a> 
-                    <form action="/docs/<%= docs._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
-                      <button class="btn" type="submit">delete</button>
-                    </form>   
+<main class="admin">
+    <div class="admin-justify">
+        <% for (docs of inventoryArray)  { %>
+            <a href="/docs/<%= docs._id %>">
+                <div "info-admin">
+                <div>
+                    <img class="thumbnail" src="/images/<%= docs.imageUrl %>" alt="document thumbnail">
+                </div>
+                <div class="p-admin">
+                        <p><span>Title:</span> <%= docs.title %></p>
+                        <p><span>Subject:</span> <%= docs.subject %></p>
+                        <p><span>Date:</span> <%= docs.date %></p>
+                        <p><span>Location:</span> <%= docs.location %></p>
+                        <p><span>Page(s):</span> <%= docs.pages %></p>
+                        <p><span>Source:</span> <%= docs.source %></p>
+                        <p><span>Type:</span> <%= docs.type %></p>
+                        <div class="btnalign">
+                            <form action="/admin/<%= docs._id %>/edit-docs">
+                                <button class="editbtn" type="submit">edit</button>
+                            </form>
+                            <form action="/docs/<%= docs._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded">
+                              <button class="editbtn" type="submit">delete</button>
+                            </form>
+                            <!-- <a href="/admin/<%= docs._id %>/edit-docs" class="editbtn">edit</a> 
+                            <form action="/docs/<%= docs._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="">
+                              <button class="editbtn" type="submit">delete</button>
+                            </form> -->
+                        </div> 
+                </div>
+                </div>
+                     
                 </div>
             </div>
             <% } %> 
   
           </div>
   
-  </section>
+        </main>
 
   <%- include('../partials/footer') -%> 

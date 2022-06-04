@@ -7,8 +7,6 @@ module.exports = {
       if(error){
         return error;
       } else {
-        console.log(allDocs[0]);
-        console.log(allDocs[0].imageUrl);
         response.render('pages/archive', {
             copyrightYear: siteData.year,
             inventoryArray: allDocs
@@ -30,35 +28,43 @@ module.exports = {
     })
   },
   docs_create_post: (request, response) => {
-    const {title, author, price, starRating, synopsis} = request.body;
-    const newBook = new Docs ({
+    const {title, subject, date, location, pages, source, type, synopsis, imageUrl} = request.body;
+    const newDocs = new Docs ({
       title: title,
-      author: author,
-      price: price,
-      starRating: starRating,
-      synopsis: synopsis
+      subject: subject,
+      date: date,
+      location: location,
+      pages: pages,
+      source: source,
+      type: type,
+      synopsis: synopsis,
+      imageUrl: imageUrl,
     });
 
     newDocs.save();
 
-    response.redirect("/admin/admin-docs"); 
+    response.redirect("/thankyou"); 
   },
   docs_update_put: (request, response) => {
     const {_id} = request.params;
     
-    const {title, author, price, starRating, synopsis} = request.body;
+    const {title, subject, date, location, pages, source, type, synopsis, imageUrl} = request.body;
 
     Docs.findByIdAndUpdate(_id, {$set: {
       title: title,
-      author: author,
-      price: price,
-      starRating: starRating,
-      synopsis: synopsis
+      subject: subject,
+      date: date,
+      location: location,
+      pages: pages,
+      source: source,
+      type: type,
+      synopsis: synopsis,
+      imageUrl: imageUrl,
     }}, {new: true}, error => {
       if(error) {
         return error;
       } else {
-        response.redirect('/admin/admin-docs');
+        response.redirect('/docs/archive');
       }
     })
   },
